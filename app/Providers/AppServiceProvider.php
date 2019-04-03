@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Repositories\PageRepository;
 use Laravel\Dusk\DuskServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -30,5 +31,15 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local', 'testing')) {
             $this->app->register(DuskServiceProvider::class);
         }
+
+        $this->bindRepositories();
+    }
+
+    /**
+     * Bind repositories.
+     */
+    public function bindRepositories()
+    {
+        $this->app->singleton('PageRepository', PageRepository::class);
     }
 }

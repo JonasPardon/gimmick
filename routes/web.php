@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('{path}', function () {
-    return view('index');
-})->where('path', '(.*)');
+Route::get('/cp', function() {
+   return view('index');
+});
+
+Route::get('/{slug}', 'PageController@show');
+
+//Route::get('{path}', function () {
+//    return view('index');
+//})->where('path', '(.*)');
