@@ -48,7 +48,7 @@ class PageRepository extends GimmickRepository
         $model = $this->model->show($slug);
         $model->fill($data);
         $model = $this->attachSlug($model, $data);
-        
+
         $model->save();
 
         return $model;

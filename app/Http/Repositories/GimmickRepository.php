@@ -4,6 +4,8 @@ namespace App\Http\Repositories;
 
 class GimmickRepository
 {
+    protected $model;
+
     /**
      * Show all entities.
      *
