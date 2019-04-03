@@ -31,7 +31,7 @@
   @yield('stylesheets')
   @yield('header-scripts')
 
-  @yield('css')
+  <style>@yield('css')</style>
 
 </head>
 <body>
