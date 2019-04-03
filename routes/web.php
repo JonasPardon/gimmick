@@ -20,7 +20,3 @@ Route::get('/cp/{path}', function() {
 })->where('path', '(.*)');
 
 Route::get('/{slug}', 'PageController@show');
-
-//Route::get('{path}', function () {
-//    return view('index');
-//})->where('path', '(.*)');
