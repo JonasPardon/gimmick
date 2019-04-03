@@ -11,15 +11,15 @@ const SettingsProfile = () => import('~/pages/settings/profile').then(m => m.def
 const SettingsPassword = () => import('~/pages/settings/password').then(m => m.default || m)
 
 export default [
-  { path: '/', name: 'welcome', component: Welcome },
+  { path: '/cp', name: 'welcome', component: Welcome },
 
-  { path: '/login', name: 'login', component: Login },
-  { path: '/register', name: 'register', component: Register },
-  { path: '/password/reset', name: 'password.request', component: PasswordEmail },
-  { path: '/password/reset/:token', name: 'password.reset', component: PasswordReset },
+  { path: '/cp/login', name: 'login', component: Login },
+  { path: '/cp/register', name: 'register', component: Register },
+  { path: '/cp/password/reset', name: 'password.request', component: PasswordEmail },
+  { path: '/cp/password/reset/:token', name: 'password.reset', component: PasswordReset },
 
-  { path: '/home', name: 'home', component: Home },
-  { path: '/settings',
+  { path: '/cp/home', name: 'home', component: Home },
+  { path: '/cp/settings',
     component: Settings,
     children: [
       { path: '', redirect: { name: 'settings.profile' } },
