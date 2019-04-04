@@ -16,7 +16,7 @@ Route::get('/cp', function() {
 });
 
 Route::get('/cp/{path}', function() {
-   return view('index');
+   return view('backend.app');
 })->where('path', '(.*)');
 
 Route::get('/{slug}', 'PageController@show');
